@@ -1,10 +1,6 @@
 require("luci.sys")
 local m,s,o
-local fs=require"nixio.fs"
-m = Map("usb3disable", "AdGuard Home")
-m.description = translate("Free and open source, powerful network-wide ads & trackers blocking DNS server.")
-m:section(SimpleSection).template  = "usb3disable/usb3disable_status"
-
+m = Map("usb3disable", "usb3disable")
 s = m:section(TypedSection, "usb3disable")
 s.anonymous=true
 s.addremove=false
